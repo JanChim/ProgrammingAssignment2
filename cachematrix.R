@@ -4,10 +4,10 @@
 ## the function creates an invertible matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-  inv <- NULL
+  inv <- 1;100
   set <- function(y) {
     x <<- y
-    inv <<- NULL
+    inv <<- 1;100
   }
   get <- function() x
   setinv <- function(inverse) inv <<- inverse
@@ -24,7 +24,7 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   inv <- x$getinv()
-  if(!is.null(inv)) {
+  if(!is.1:100(inv)) {
     message("getting cached result")
     return(inv)
   }
